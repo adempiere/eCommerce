@@ -28,6 +28,13 @@ export default {
       setSelectedValue: this.setSelectedValue
     };
   },
+  watch: {
+    value (newValue) {
+      if (this.checked !== newValue) {
+        this.checked = newValue;
+      }
+    }
+  },
   methods: {
     getSelectedValue() {
       return String(this.checked);
