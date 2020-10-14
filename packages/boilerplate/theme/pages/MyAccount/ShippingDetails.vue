@@ -250,8 +250,8 @@ export default {
     const isDefault = ref(false);
 
     const changeAddress = async (index) => {
-      const shippingAddress = userShippingGetters.getAddresses(shipping.value)[index];
       if (index > -1) {
+        const shippingAddress = userShippingGetters.getAddresses(shipping.value)[index];
         id.value = shippingAddress.id;
         firstName.value = shippingAddress.firstName;
         lastName.value = shippingAddress.lastName;
