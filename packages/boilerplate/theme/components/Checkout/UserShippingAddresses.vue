@@ -11,19 +11,19 @@
         :name="String(shippingAddress.id)"
       >
         <span
-          >{{ shippingAddress.firstName }} {{ shippingAddress.lastName }}</span
+          >{{ userShippingGetters.getFirstName(shippingAddress) }} {{ userShippingGetters.getLastName(shippingAddress) }}</span
         >
         <span
-          >{{ shippingAddress.streetName }}
-          {{ shippingAddress.apartment }}</span
+          >{{ userShippingGetters.getStreetName(shippingAddress) }}
+          {{ userShippingGetters.getApartmentNumber(shippingAddress) }}</span
         >
-        <span>{{ shippingAddress.zipCode }}</span>
+        <span>{{ userShippingGetters.getPostCode(shippingAddress) }}</span>
         <span
-          >{{ shippingAddress.city
-          }}{{ shippingAddress.state ? `, ${shippingAddress.city}` : '' }}</span
+          >{{ userShippingGetters.getCity(shippingAddress)
+          }}{{ userShippingGetters.getProvince(shippingAddress) ? `, ${userShippingGetters.getProvince(shippingAddress)}` : '' }}</span
         >
-        <span>{{ shippingAddress.country }}</span>
-        <span>{{ shippingAddress.phoneNumber }}</span>
+        <span>{{ userShippingGetters.getCountry(shippingAddress)}}</span>
+        <span>{{ userShippingGetters.getPhone(shippingAddress) }}</span>
       </SfAddress>
     </SfAddressPicker>
     <SfCheckbox
@@ -42,6 +42,8 @@ import {
 } from '@storefront-ui/vue';
 import SfAddressPicker from '~/components/temp/SfAddressPicker';
 import { ref, watch } from '@vue/composition-api';
+import { userShippingGetters } from '@vue-storefront/commercetools';
+
 export default {
   name: 'UserShippingAddresses',
   props: {
@@ -74,7 +76,8 @@ export default {
 
     return {
       setCurrentAddress,
-      localSetAsDefault
+      localSetAsDefault,
+      userShippingGetters
     };
   }
 };
