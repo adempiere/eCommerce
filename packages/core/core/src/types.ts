@@ -102,7 +102,6 @@ export interface UserShippingGetters<USER_SHIPPING, USER_SHIPPING_ITEM> {
   getFirstName: (address: USER_SHIPPING_ITEM) => string;
   getLastName: (address: USER_SHIPPING_ITEM) => string;
   getCountry: (address: USER_SHIPPING_ITEM) => string;
-  getStreetNumber: (address: USER_SHIPPING_ITEM) => string;
   getPhone: (address: USER_SHIPPING_ITEM) => string;
   getEmail: (address: USER_SHIPPING_ITEM) => string;
   getProvince: (address: USER_SHIPPING_ITEM) => string;
@@ -130,12 +129,14 @@ export interface UserBillingGetters<USER_BILLING, USER_BILLING_ITEM> {
   getFirstName: (address: USER_BILLING_ITEM) => string;
   getLastName: (address: USER_BILLING_ITEM) => string;
   getCountry: (address: USER_BILLING_ITEM) => string;
-  getStreetNumber: (address: USER_BILLING_ITEM) => string;
   getPhone: (address: USER_BILLING_ITEM) => string;
   getEmail: (address: USER_BILLING_ITEM) => string;
   getProvince: (address: USER_BILLING_ITEM) => string;
   getCompanyName: (address: USER_BILLING_ITEM) => string;
   getTaxNumber: (address: USER_BILLING_ITEM) => string;
+  getId: (address: USER_BILLING_ITEM) => string;
+  getApartmentNumber: (address: USER_BILLING_ITEM) => string | number;
+  getIsDefault: (address: USER_BILLING_ITEM) => boolean;
 }
 
 export interface UseCategory<CATEGORY> {
