@@ -108,6 +108,8 @@ export interface UserShippingGetters<USER_SHIPPING, USER_SHIPPING_ITEM> {
   getProvince: (address: USER_SHIPPING_ITEM) => string;
   getCompanyName: (address: USER_SHIPPING_ITEM) => string;
   getTaxNumber: (address: USER_SHIPPING_ITEM) => string;
+  getId: (address: USER_SHIPPING_ITEM) => string;
+  getApartmentNumber: (address: USER_SHIPPING_ITEM) => string | number;
   isDefault: (address: USER_SHIPPING_ITEM) => boolean;
 }
 
