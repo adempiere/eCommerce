@@ -1,6 +1,12 @@
 
 <img src="https://d9hhrg4mnvzow.cloudfront.net/www.vuestorefront.io/280b19d0-logo-vs_0by02c0by02c000000.jpg"></img>
 
+# ADempiere eCommerce
+
+This project integrates ADempiere with the Vue Storefront platform, the API connection is developed using TypeScript and the backend using Scala through microservices connected with gRPC protocol.
+
+To promote this project in a monetary way you can do it through [Paypal Me](https://paypal.me/eevolution)
+
 # Vue Storefront - Headless PWA for any eCommerce
 
 <a href="https://travis-ci.org/DivanteLtd/vue-storefront"><img src="https://travis-ci.org/DivanteLtd/vue-storefront.svg?branch=master" alt="build:passed"></a>
