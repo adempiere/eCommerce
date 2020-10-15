@@ -108,6 +108,7 @@ export interface UserShippingGetters<USER_SHIPPING, USER_SHIPPING_ITEM> {
   getProvince: (address: USER_SHIPPING_ITEM) => string;
   getCompanyName: (address: USER_SHIPPING_ITEM) => string;
   getTaxNumber: (address: USER_SHIPPING_ITEM) => string;
+  isDefault: (address: USER_SHIPPING_ITEM) => boolean;
 }
 
 export interface UseUserBilling<USER_BILLING, USER_BILLING_ITEM> {
@@ -138,7 +139,7 @@ export interface UserBillingGetters<USER_BILLING, USER_BILLING_ITEM> {
   getTaxNumber: (address: USER_BILLING_ITEM) => string;
   getId: (address: USER_BILLING_ITEM) => string;
   getApartmentNumber: (address: USER_BILLING_ITEM) => string | number;
-  getIsDefault: (address: USER_BILLING_ITEM) => boolean;
+  isDefault: (address: USER_BILLING_ITEM) => boolean;
 }
 
 export interface UseCategory<CATEGORY> {
