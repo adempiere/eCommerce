@@ -98,6 +98,7 @@ export interface UserShippingGetters<USER_SHIPPING, USER_SHIPPING_ITEM> {
   getTotal: (shipping: USER_SHIPPING) => number;
   getPostCode: (address: USER_SHIPPING_ITEM) => string;
   getStreetName: (address: USER_SHIPPING_ITEM) => string;
+  getStreetNumber: (address: USER_SHIPPING_ITEM) => string | number;
   getCity: (address: USER_SHIPPING_ITEM) => string;
   getFirstName: (address: USER_SHIPPING_ITEM) => string;
   getLastName: (address: USER_SHIPPING_ITEM) => string;
@@ -125,6 +126,7 @@ export interface UserBillingGetters<USER_BILLING, USER_BILLING_ITEM> {
   getTotal: (billing: USER_BILLING) => number;
   getPostCode: (address: USER_BILLING_ITEM) => string;
   getStreetName: (address: USER_BILLING_ITEM) => string;
+  getStreetNumber: (address: USER_BILLING_ITEM) => string | number;
   getCity: (address: USER_BILLING_ITEM) => string;
   getFirstName: (address: USER_BILLING_ITEM) => string;
   getLastName: (address: USER_BILLING_ITEM) => string;
